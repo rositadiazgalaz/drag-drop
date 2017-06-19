@@ -4,7 +4,7 @@ var elemOrigen = document.getElementById("imagen");
 /* dragstart se desencadena cuando se comienza a 
 arrastrar un objeto */
 //ejemplo
-/*elemOrigen.addEventListener("dragstart", function(){
+elemOrigen.addEventListener("dragstart", function(){
 	alert("comenzó el evento");
 }, false);
 
