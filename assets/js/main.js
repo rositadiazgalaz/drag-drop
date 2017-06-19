@@ -27,9 +27,9 @@ elemOrigen.addEventListener("dragstart", comienzaArrastrar, false);
 // var elemDestino = document.getElementById("zonaDestino");
 // es decir 
 elemDestino = document.getElementById("zonaDestino");
-
-elemDestino.addEventListener("dragenter", function(e){
-	e.preventDefault();}, false);
+	// dragenter
+ /*elemDestino.addEventListener("dragenter", function(e){
+	e.preventDefault();}, false); */
 
 elemDestino.addEventListener("dragover", function(e){
 	e.preventDefault();}, false);
@@ -37,6 +37,10 @@ elemDestino.addEventListener("dragover", function(e){
 elemDestino.addEventListener("drop", soltar, false);
 
 elemOrigen.addEventListener("dragend", terminar, false);
+
+elemDestino.addEventListener("dragenter", entrar, false);
+
+elemDestino.addEventListener("dragleave", salir, false);
 
 }
 
@@ -62,6 +66,23 @@ function terminar (e){
 	elemento.style.visibility="hidden";
 }
 
+function entrar (e){
+	/* preventDefault resetea el compartamiento por defecto del ordenador*/
+	e.preventDefault();
+	elemDestino.style.background="#7DEA87";
+}
+
+function salir (e){
+
+	e.preventDefault();
+
+	// para cambiar el color de fondo de la zona de destino 
+	//cuando el mouse sale de la zona
+	//elemDestino.style.background="#F5E0E0";
+
+	// borrar la zona de destino cuando salgo la imagen de la zono destino
+	elemDestino.style.visibility="hidden";
+}
 
 
 
