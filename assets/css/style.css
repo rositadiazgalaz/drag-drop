@@ -1,1 +1,13 @@
-style.css
+#cajaImagen{
+	float: left;
+	width: 400px;
+	margin: 30px;
+	border: 2px solid #F29595;
+}
+#zonaDestino{
+	float: left;
+	width: 550px;
+	height: 400px;
+	margin: 100px;
+	border: 2px solid #3271E4;
+}
